@@ -5,3 +5,4 @@
    4) some task management
    5) uc gui management app
    6) wish list
+   7) infra description

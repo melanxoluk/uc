@@ -1,0 +1,6 @@
+service:
+  name: service
+  port: 8080
+  database: database/service-database
+  kafka: common/kafka
+  logs: common/opensearch
