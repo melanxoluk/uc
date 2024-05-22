@@ -1,0 +1,15 @@
+# editing view, where entries could be grouped, while target would be compiled to the single file schema
+name: 'some name'
+metaSchema: 'draft-20'
+structure:
+  - path: 'schema-name.yaml'
+    isRoot: true
+    type: 'file'
+    content:
+      $id: '...'
+  - path: 'models'
+    type: 'group'
+    entries:
+      - path: 'aggregate-schema.yaml'
+        type: 'file'
+        content:
