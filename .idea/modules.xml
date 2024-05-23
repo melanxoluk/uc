@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/examples/first/uc.examples.first.main.iml" filepath="$PROJECT_DIR$/.idea/modules/examples/first/uc.examples.first.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/client/uc.service.client.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/client/uc.service.client.main.iml" />
+    </modules>
+  </component>
+</project>
