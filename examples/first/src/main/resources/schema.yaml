@@ -1,0 +1,24 @@
+$id: schema
+required:
+  - text
+  - textArr
+  - integer
+  - integerArr
+  - real
+  - realArr
+  - decimal
+  - decimalArr
+  - date
+  - dateArr
+  - dateTime
+  - dateTimeArr
+  - timestamp
+  - timestampArr
+  - nestedObject
+  - nestedObjectArr
+  - otherConfig
+  - otherConfigArr
+  - file
+  - fileArr
+properties:
+  text: { type: string }

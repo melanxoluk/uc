@@ -1,0 +1,72 @@
+text: text
+textArr: [ text1, text ]
+integer: 1
+integerArr: [ 1, 2 ]
+real: 0.5
+realArr: [ 0.25, 0.5 ]
+decimal: 1.23
+decimalArr: [ 1.11, 2.22 ]
+date: 2024-12-31
+dateArr: [ 2024-12-31, 2023-12-31 ]
+dateTime: 2024-12-31T23:59:59.000+01:00
+dateTimeArr: [ 2024-12-31T23:59:59.000+01:00, 2023-12-31T23:59:59.000+01:00 ]
+timestamp: 2024-12-31T23:59:59.000
+timestampArr: [ 2024-12-31T23:59:59.000, 2023-12-31T23:59:59.000 ]
+nestedObject:
+  text: text
+  textArr: [ text1, text ]
+  integer: 1
+  integerArr: [ 1, 2 ]
+  real: 0.5
+  realArr: [ 0.25, 0.5 ]
+  decimal: 1.23
+  decimalArr: [ 1.11, 2.22 ]
+  date: 2024-12-31
+  dateArr: [ 2024-12-31, 2023-12-31 ]
+  dateTime: 2024-12-31T23:59:59.000+01:00
+  dateTimeArr: [ 2024-12-31T23:59:59.000+01:00, 2023-12-31T23:59:59.000+01:00 ]
+  timestamp: 2024-12-31T23:59:59.000
+  timestampArr: [ 2024-12-31T23:59:59.000, 2023-12-31T23:59:59.000 ]
+  nestedObject: null
+  nestedObjectArr: [ ]
+  otherConfig:
+    path: config.yaml
+  otherConfigArr:
+    - path: config.yaml
+  file:
+    path: content.txt
+  fileArr:
+    - path: content.txt
+nestedObjectArr:
+  - text: text
+    textArr: [ text1, text ]
+    integer: 1
+    integerArr: [ 1, 2 ]
+    real: 0.5
+    realArr: [ 0.25, 0.5 ]
+    decimal: 1.23
+    decimalArr: [ 1.11, 2.22 ]
+    date: 2024-12-31
+    dateArr: [ 2024-12-31, 2023-12-31 ]
+    dateTime: 2024-12-31T23:59:59.000+01:00
+    dateTimeArr: [ 2024-12-31T23:59:59.000+01:00, 2023-12-31T23:59:59.000+01:00 ]
+    timestamp: 2024-12-31T23:59:59.000
+    timestampArr: [ 2024-12-31T23:59:59.000, 2023-12-31T23:59:59.000 ]
+    nestedObject: null
+    nestedObjectArr: [ ]
+    otherConfig:
+      path: config.yaml
+    otherConfigArr:
+      path: config.yaml
+    file:
+      path: content.txt
+    fileArr:
+      path: content.txt
+otherConfig:
+  path: config.yaml
+otherConfigArr:
+  - path: config.yaml
+file:
+  path: content.txt
+fileArr:
+  - path: content.txt
