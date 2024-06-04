@@ -1,8 +1,7 @@
 package dev.melanxoluk.uc.examples.first
 
-import dev.melanxoluk.uc.configuration.ConfigPath
-import dev.melanxoluk.uc.configuration.UConfig
-import dev.melanxoluk.uc.configuration.UConfigReference
+import dev.melanxoluk.uc.configuration.Config
+import dev.melanxoluk.uc.configuration.ConfigReference
 import java.math.BigDecimal
 import java.time.Instant
 import java.time.LocalDate
@@ -25,8 +24,8 @@ data class Config(
     val timestampArr: List<Instant>,
     val nestedObject: Config?,
     val nestedObjectArr: List<Config>,
-    val otherConfig: UConfigReference,
-    val otherConfigArr: List<UConfigReference>,
-    val file: UConfigReference,
-    val fileArr: List<UConfigReference>
-) : UConfig
+    val otherConfig: ConfigReference,
+    val otherConfigArr: List<ConfigReference>,
+    val file: ConfigReference,
+    val fileArr: List<ConfigReference>
+) : Config

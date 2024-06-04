@@ -3,9 +3,10 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":common"))
     implementation(libs.bundles.logs)
     implementation(libs.bundles.jackson)
-    implementation(libs.exposed.core)
+    implementation(libs.bundles.exposed)
 
     testImplementation(kotlin("test"))
 }

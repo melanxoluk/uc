@@ -11,7 +11,7 @@ typealias ConfigPath = String
 /**
  * Marker interface to note that entity is used as configuration entry
  */
-interface UConfig
+interface Config
 
 /**
  * To emphasize using of the reference to the other config provide
@@ -19,7 +19,7 @@ interface UConfig
  * 
  * todo: could be same used to access content file of the configuration?
  */
-data class UConfigReference(
+data class ConfigReference(
     val path: ConfigPath,
     val configuration: String,
     val namedRevision: String,

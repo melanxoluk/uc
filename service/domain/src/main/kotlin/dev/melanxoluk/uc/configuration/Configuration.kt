@@ -1,6 +1,6 @@
 package dev.melanxoluk.uc.configuration
 
-data class Configuration<out T : UConfig>(
+data class Configuration<out T : Config>(
     val hash: String,
     val name: String,
 

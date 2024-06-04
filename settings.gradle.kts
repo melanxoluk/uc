@@ -1,5 +1,6 @@
 rootProject.name = "uc"
 
+include(":common")
 include(":service:client")
 include(":service:domain")
 include(":examples:first")
@@ -28,11 +29,12 @@ dependencyResolutionManagement {
             bundle("jackson", listOf("jackson-kotlin", "jackson-jsr"))
             bundle("json-schema", listOf("json-schema-validator", "jackson-kotlin", "jackson-yaml"))
 
-            version("exposed", "0.48.0")
+            version("exposed", "0.51.0")
             library("exposed-core", "org.jetbrains.exposed", "exposed-core").versionRef("exposed")
             library("exposed-jdbc", "org.jetbrains.exposed", "exposed-jdbc").versionRef("exposed")
             library("exposed-java-time", "org.jetbrains.exposed", "exposed-java-time").versionRef("exposed")
-            bundle("exposed", listOf("exposed-core", "exposed-jdbc", "exposed-java-time"))
+            library("exposed-json", "org.jetbrains.exposed", "exposed-json").versionRef("exposed")
+            bundle("exposed", listOf("exposed-core", "exposed-jdbc", "exposed-java-time", "exposed-json"))
 
             version("http4k", "5.13.9.0")
             library("http4k-core", "org.http4k", "http4k-core").versionRef("http4k")
