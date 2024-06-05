@@ -1,0 +1,70 @@
+openapi: 3.0.3
+info:
+  title: Universal configs API
+  version: 1.0.0
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: JSON Schemas
+    description: Manage JSON Schemas registry
+  - name: configuration
+    description: Access to Petstore orders
+paths:
+  /schemas/import:
+    post:
+      tags: [ JSON Schemas ]
+      summary: Import .zip with JSON Schema content
+      description:
+        "1) В архиве должен быть как минимум один файл с расширением .json | .yaml
+        2) В архиве может быть произвольное количество файлов в произвольной иерархии
+        3) Например в архиве 2 файла в руте, какой из них будет образующим для целевой схемы?
+        Тот, который пользователь указал как main json schema file
+        4) Что делать, если найден файл с другим расширением? Записывать в замечания импорта
+        5) Что делать, если в файле не json schema? Записывать в замечания импорта
+        6) Что делать, если одна из схем не валидно?
+        То будет загружена не валидная схема, а к текущему состояния будет прилинкован набор
+        найденных ошибок
+        7) Должна быть настройка максимального размере архива и файла в архиве (нужно чекнуть
+        размер файла у кубера)
+        8) Архивы грузим в минио и логируем историю изменения схем. История изменений цепляется
+        к схеме и хранит мапу диффов изменных файлов и текст замечаний/ошибок к схеме.
+        Или для схем тоже сделать отключаемую механику с ревью и копить изменения и потом в
+        какой то момент прожимать применение изменений"
+      operationId: importSchema
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                mainFile:
+                  type: string
+                version:
+                  type: string
+                processErrors:
+                  type: string
+                  enum:
+                    # errors are not reason to save uploaded content
+                    - SAVE
+                    # reject saving schemas while there are exceptions in the content of schema files 
+                    - FAIL
+                archive:
+                  type: string
+                  format: binary
+        
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+        '422':
+          description: Validation exception

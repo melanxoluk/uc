@@ -32,7 +32,8 @@ fun main() {
     Thread.currentThread().join()
 }
 
-private fun uploadSchema(path: String, rootPath: String): Long {
+// api: /schemas/import
+private fun importSchemaZip(localPath: String, mainJsonSchemaFile: String): Long {
     
 }
 
