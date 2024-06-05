@@ -6,7 +6,7 @@ dependencies {
     implementation(project(":common"))
     implementation(libs.bundles.logs)
     implementation(libs.bundles.jackson)
-    implementation(libs.bundles.exposed)
+    implementation(libs.bundles.jsonSchema)
 
     testImplementation(kotlin("test"))
 }

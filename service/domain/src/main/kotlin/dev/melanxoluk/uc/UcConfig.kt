@@ -12,6 +12,11 @@ interface UcConfig {
         val schemasDirectory: String
 
         /**
+         * Which files could be imported: .yaml, .yml, .json, etc.
+         */
+        val acceptableFileExtensions: List<String>
+            
+        /**
          * Max size of import archives
          */
         val importArchiveMaxSize: Long
