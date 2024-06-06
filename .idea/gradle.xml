@@ -8,12 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/common" />
-            <option value="$PROJECT_DIR$/examples" />
-            <option value="$PROJECT_DIR$/examples/first" />
-            <option value="$PROJECT_DIR$/service" />
-            <option value="$PROJECT_DIR$/service/client" />
-            <option value="$PROJECT_DIR$/service/domain" />
+            <option value="$PROJECT_DIR$/uc-api" />
+            <option value="$PROJECT_DIR$/uc-client" />
+            <option value="$PROJECT_DIR$/uc-common" />
+            <option value="$PROJECT_DIR$/uc-domain" />
+            <option value="$PROJECT_DIR$/uc-examples" />
+            <option value="$PROJECT_DIR$/uc-examples/first" />
           </set>
         </option>
       </GradleProjectSettings>
