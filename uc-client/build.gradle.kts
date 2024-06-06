@@ -3,13 +3,11 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":common"))
-
-    implementation(libs.postgresql)
+    implementation(project(":uc-domain"))
+    
     implementation(libs.bundles.logs)
-    implementation(libs.bundles.exposed)
     implementation(libs.bundles.jackson)
-    implementation(libs.bundles.jsonSchema)
+    implementation(libs.kafka)
 
     testImplementation(kotlin("test"))
 }

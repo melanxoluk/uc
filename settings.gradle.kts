@@ -1,9 +1,10 @@
 rootProject.name = "uc"
 
-include(":common")
-include(":service:client")
-include(":service:domain")
-include(":examples:first")
+include(":uc-common")
+include(":uc-domain")
+include(":uc-api")
+include(":uc-client")
+include(":uc-examples:first")
 
 // configure dependencies to all projects
 dependencyResolutionManagement {

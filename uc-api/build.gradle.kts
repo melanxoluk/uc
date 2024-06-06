@@ -3,12 +3,11 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":service:client"))
-    implementation(project(":service:domain"))
-    
+    implementation(project(":uc-domain"))
+
+    implementation(libs.exposedCore)
     implementation(libs.bundles.logs)
-    implementation(libs.bundles.jackson)
-    implementation(libs.kafka)
+    implementation(libs.bundles.http4k)
 
     testImplementation(kotlin("test"))
 }

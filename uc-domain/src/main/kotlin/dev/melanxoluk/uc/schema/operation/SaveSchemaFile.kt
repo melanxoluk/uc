@@ -5,10 +5,7 @@ import dev.melanxoluk.uc.schema.Schema
 import org.slf4j.LoggerFactory
 import java.nio.file.Files
 import java.nio.file.Paths
-import java.nio.file.StandardOpenOption
 import kotlin.io.path.absolutePathString
-import kotlin.io.path.createDirectory
-import kotlin.io.path.notExists
 
 class SaveSchemaFile(
     private val schema: Schema,
