@@ -4,7 +4,8 @@ package dev.melanxoluk.uc
  * UC persistence configuration
  */
 data class UcConfig(
-    val schemas: UcSchemasConfig
+    val schemas: UcSchemasConfig,
+    val configurations: UcConfigurationsConfig
 ) {
     
     data class UcSchemasConfig(
@@ -28,5 +29,9 @@ data class UcConfig(
          * Max file size in archive
          */
         val archiveFileMaxSize: Long,
+    )
+    
+    data class UcConfigurationsConfig(
+        val configurationsDirectory: String
     )
 }

@@ -13,8 +13,10 @@ class SaveSchemaFile(
     private val path: String,
     private val content: ByteArray
 ) {
-    
-    private val log = LoggerFactory.getLogger(javaClass)
+   
+    companion object {
+        private val log = LoggerFactory.getLogger(SaveSchemaFile::class.java)    
+    }
     
     fun execute(config: UcConfig) {
         val targetVersion = version ?: schema.actualVersion

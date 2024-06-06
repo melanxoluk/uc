@@ -1,6 +1,6 @@
 package dev.melanxoluk.uc.client
 
-import dev.melanxoluk.uc.configuration.Configuration
+import dev.melanxoluk.uc.configuration.ConfigurationEvent
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.clients.consumer.KafkaConsumer
 import org.apache.kafka.clients.consumer.OffsetAndMetadata
@@ -19,7 +19,7 @@ class UcClient(
      * Default listener do nothing
      * Provided to make possible detect application readiness
      */
-    private val listener: (Configuration<*>) -> Unit = {}
+    private val listener: (ConfigurationEvent<*>) -> Unit = {}
 ): Runnable {
 
     private val log = LoggerFactory.getLogger(javaClass)
