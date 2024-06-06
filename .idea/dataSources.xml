@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="[LOC] rpp_platform" uuid="8faaef34-e759-40ee-a8ab-a5b29c80bc42">
+    <data-source source="LOCAL" name="[LOC] uc" uuid="d2a45529-aec7-4797-95d3-eeddcb9bb8b3">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/rpp_platform</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/uc</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

@@ -16,4 +16,9 @@ object SchemaTable : LongIdTable("json_schema") {
      * Relative file system path where files of the schema are located
      */
     val path = text("path")
+
+    /**
+     * Version which is used by default
+     */
+    val actualVersion = text("actual_version")
 }

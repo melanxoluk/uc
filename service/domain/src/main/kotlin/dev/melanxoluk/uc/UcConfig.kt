@@ -3,29 +3,30 @@ package dev.melanxoluk.uc
 /**
  * UC persistence configuration
  */
-interface UcConfig {
-    interface UcSchemasConfig {
-        
+data class UcConfig(
+    val schemas: UcSchemasConfig
+) {
+    
+    data class UcSchemasConfig(
+
         /**
          * Directory where schema files are saved
          */
-        val schemasDirectory: String
+        val schemasDirectory: String,
 
         /**
          * Which files could be imported: .yaml, .yml, .json, etc.
          */
-        val acceptableFileExtensions: List<String>
-            
+        val acceptableFileExtensions: List<String>,
+
         /**
          * Max size of import archives
          */
-        val importArchiveMaxSize: Long
+        val importArchiveMaxSize: Long,
 
         /**
          * Max file size in archive
          */
-        val archiveFileMaxSize: Long
-    }
-    
-    val schemas: UcSchemasConfig
+        val archiveFileMaxSize: Long,
+    )
 }

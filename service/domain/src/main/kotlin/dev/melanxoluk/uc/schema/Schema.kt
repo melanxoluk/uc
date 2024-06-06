@@ -7,13 +7,15 @@ data class Schema(
     val name: String,
     val description: String?,
     val uri: String,
-    val path: String
+    val path: String,
+    val actualVersion: String
 ) {
     constructor(row: ResultRow) : this(
         id = row[SchemaTable.id].value,
         name = row[SchemaTable.name],
         description = row[SchemaTable.description],
         uri = row[SchemaTable.uri],
-        path = row[SchemaTable.path]
+        path = row[SchemaTable.path],
+        actualVersion = row[SchemaTable.actualVersion]
     )
 }

@@ -10,7 +10,8 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 class CreateSchema(
     private val name: String,
-    private val description: String?
+    private val description: String?,
+    private val initialVersion: String?
 ) {
 
     fun execute(): Schema {
@@ -30,6 +31,7 @@ class CreateSchema(
                 it[description] = this@CreateSchema.description
                 it[uri] = this@CreateSchema.name.cebabl
                 it[path] = this@CreateSchema.name.cebabl
+                it[actualVersion] = initialVersion ?: "1.0.0"
             }
 
             GetSchema(savedId.value).execute()
