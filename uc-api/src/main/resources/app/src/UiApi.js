@@ -4,3 +4,6 @@ class UiApi {
     
   }
 }
+
+
+export default UiApi;

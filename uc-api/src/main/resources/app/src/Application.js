@@ -1,3 +1,5 @@
+import UiApi from "./UiApi.js";
+
 /**
  Root context object which would be passed for application controllers hierarchy
  to support everything except rendering & managing user interactions
