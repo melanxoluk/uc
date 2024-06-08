@@ -39,18 +39,35 @@ class ConfigurationVersionController {
           m("div", {class: "sub header"}, "v1.0.0")
         ]),
 
-        m("dev", {class: "ui tree accordion"},
-          this.dirs.flatMap(dir => {
-            return [
-              m("div", {class: "title"}, [
-                m("i", {class: "folder icon"}),
-                m("div", {class:"header"}, dir)
-              ]),
-              m("div", {class: "content"},
-                m("p", {class: "transition hidden"}, dir)
-              )
-            ]
-          }))
+        m("div", {class: "ui small basic buttons"}, [
+          m("button", {class: "ui button"}, [
+            m("i", {class: "icon folder"}),
+            "Add directory"
+          ]),
+          m("button", {class: "ui button"}, [
+            m("i", {class: "icon file"}),
+            "Add file"
+          ]),
+        ]),
+
+        m("div", {class: "ui segment"},
+          m("div", {class: "ui tree accordion"},
+            this.dirs.flatMap(dir => {
+              return [
+                m("div", {class: "title"}, [
+                  m("i", {class: "folder icon"}),
+                  dir
+                ]),
+                m("div", {class: "content"}, [
+                    m("p", {class: "transition hidden"}, [
+                      m("i", {class: "icon file"}),
+                      dir
+                    ])
+                  ]
+                )
+              ]
+            }))
+        )
       ]))
   }
 }
