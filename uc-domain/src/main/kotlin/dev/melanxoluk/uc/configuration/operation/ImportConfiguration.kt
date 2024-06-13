@@ -20,12 +20,12 @@ class ImportConfiguration(
     fun execute(config: UcConfig): ConfigurationImported {
         // todo save not configuration files to S3
 
-        val configurationFiles = mutableMapOf<String, ByteArray>()
+        val configurationFiles = mutableMapOf<String, String>()
         val zipIn = ZipInputStream(archive)
 
         lateinit var zipEntry: ZipEntry
         while (zipIn.nextEntry?.also { zipEntry = it } != null) {
-            val zipFileContent = zipIn.readAllBytes()
+            val zipFileContent = String(zipIn.readAllBytes())
             configurationFiles[zipEntry.name] = zipFileContent
         }
 

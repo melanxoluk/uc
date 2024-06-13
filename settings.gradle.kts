@@ -18,6 +18,7 @@ dependencyResolutionManagement {
             library("postgresql", "org.postgresql:postgresql:42.7.1")
             library("slf4j", "org.slf4j:slf4j-api:2.0.9")
             library("jsonSchemaValidator", "com.networknt:json-schema-validator:1.3.3")
+            library("java-diff-utils", "io.github.java-diff-utils:java-diff-utils:4.9")
 
             version("logback", "1.5.1")
             library("logbackCore", "ch.qos.logback", "logback-core").versionRef("logback")

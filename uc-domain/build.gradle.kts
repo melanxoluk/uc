@@ -6,6 +6,7 @@ dependencies {
     implementation(project(":uc-common"))
 
     implementation(libs.postgresql)
+    implementation(libs.java.diff.utils)
     implementation(libs.bundles.logs)
     implementation(libs.bundles.exposed)
     implementation(libs.bundles.jackson)
