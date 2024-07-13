@@ -1,6 +1,6 @@
 package dev.melanxoluk.uc.configuration.operation
 
-import dev.melanxoluk.uc.UcConfig
+import dev.melanxoluk.uc.UcConfiguration
 import dev.melanxoluk.uc.configuration.Configuration
 import java.io.InputStream
 import java.util.zip.ZipEntry
@@ -17,7 +17,7 @@ class ImportConfiguration(
         val messages: List<String>
     )
     
-    fun execute(config: UcConfig): ConfigurationImported {
+    fun execute(config: UcConfiguration): ConfigurationImported {
         // todo save not configuration files to S3
 
         val configurationFiles = mutableMapOf<String, String>()

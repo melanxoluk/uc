@@ -2,7 +2,7 @@ package dev.melanxoluk.uc.configuration.operation
 
 import com.github.difflib.DiffUtils
 import com.github.difflib.patch.Patch
-import dev.melanxoluk.uc.UcConfig
+import dev.melanxoluk.uc.UcConfiguration
 import dev.melanxoluk.uc.configuration.Configuration
 import org.slf4j.LoggerFactory
 import java.nio.file.Files
@@ -20,7 +20,7 @@ class SaveConfigurationFile(
         private val log = LoggerFactory.getLogger(SaveConfigurationFile::class.java)
     }
 
-    fun execute(config: UcConfig): Patch<String> {
+    fun execute(config: UcConfiguration): Patch<String> {
         val targetVersion = version ?: configuration.actualVersion
 
         val rootPath = Paths.get(config.configurations.configurationsDirectory)

@@ -3,12 +3,12 @@ package dev.melanxoluk.uc
 /**
  * UC persistence configuration
  */
-data class UcConfig(
-    val schemas: UcSchemasConfig,
-    val configurations: UcConfigurationsConfig
+data class UcConfiguration(
+    val schemas: UcSchemasConfiguration,
+    val configurations: UcConfigurations
 ) {
     
-    data class UcSchemasConfig(
+    data class UcSchemasConfiguration(
 
         /**
          * Directory where schema files are saved
@@ -31,7 +31,7 @@ data class UcConfig(
         val archiveFileMaxSize: Long,
     )
     
-    data class UcConfigurationsConfig(
+    data class UcConfigurations(
         val configurationsDirectory: String
     )
 }

@@ -1,7 +1,7 @@
 package dev.melanxoluk.uc.rest
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import dev.melanxoluk.uc.UcConfig
+import dev.melanxoluk.uc.UcConfiguration
 import dev.melanxoluk.uc.rest.handler.CreateConfigurationHandler
 import dev.melanxoluk.uc.rest.handler.GetSchemaFileHandler
 import dev.melanxoluk.uc.rest.handler.ImportSchemaHandler
@@ -14,8 +14,8 @@ import org.http4k.server.asServer
 fun main() {
     val mapper = ObjectMapper()
 
-    val config = UcConfig(
-        schemas = UcConfig.UcSchemasConfig(
+    val config = UcConfiguration(
+        schemas = UcConfiguration.UcSchemasConfiguration(
             schemasDirectory = "schemas",
             acceptableFileExtensions = listOf("json", "yaml", "yml"),
             importArchiveMaxSize = 50 * 1024 * 1024,

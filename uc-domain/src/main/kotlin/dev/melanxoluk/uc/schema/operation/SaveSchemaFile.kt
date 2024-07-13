@@ -1,6 +1,6 @@
 package dev.melanxoluk.uc.schema.operation
 
-import dev.melanxoluk.uc.UcConfig
+import dev.melanxoluk.uc.UcConfiguration
 import dev.melanxoluk.uc.schema.Schema
 import org.slf4j.LoggerFactory
 import java.nio.file.Files
@@ -18,7 +18,7 @@ class SaveSchemaFile(
         private val log = LoggerFactory.getLogger(SaveSchemaFile::class.java)    
     }
     
-    fun execute(config: UcConfig) {
+    fun execute(config: UcConfiguration) {
         val targetVersion = version ?: schema.actualVersion
         
         val rootPath = Paths.get(config.schemas.schemasDirectory)

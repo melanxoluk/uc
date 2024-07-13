@@ -1,6 +1,6 @@
 package dev.melanxoluk.uc.schema.operation
 
-import dev.melanxoluk.uc.UcConfig
+import dev.melanxoluk.uc.UcConfiguration
 import dev.melanxoluk.uc.UcException
 import dev.melanxoluk.uc.schema.Schema
 import java.io.InputStream
@@ -25,7 +25,7 @@ class ImportSchema(
         val messages: List<String>
     )
     
-    fun execute(config: UcConfig): SchemaImported {
+    fun execute(config: UcConfiguration): SchemaImported {
         val messages = mutableListOf<String>()
         val schemaFiles = mutableMapOf<String, ByteArray>()
         val zipIn = ZipInputStream(archive)
